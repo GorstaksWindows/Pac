@@ -359,6 +359,7 @@ var blockedSites = [
   "win8.ipv6.microsoft.com",
   "xblgdvrassets3010.blob.core.windows.net",
   "ztd.dds.microsoft.com",
+  "hrt.hr",
   "forum.hr",
   "forum.bug.hr",
   "forum.pcekspert.com",
