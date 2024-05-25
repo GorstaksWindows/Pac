@@ -381,6 +381,34 @@ var blockedSites = [
   "discord.com/channels/549448381613998103",
 ];
 
+var blockedIPs = [
+  "185.199.110.133",
+  "208.95.184.162",
+  "208.95.184.201",
+];
+
+var blockedIPRanges = [
+  { base: "185.199.110.0", mask: 8 },
+  { base: "208.95.184.0", mask: 8 },
+];
+
+function ipToNum(ip) {
+  return ip.split('.').reduce((acc, octet) => (acc << 8) + parseInt(octet, 10), 0);
+}
+
+function isIPInRange(ip, range) {
+  const ipNum = ipToNum(ip);
+  const baseNum = ipToNum(range.base);
+  const mask = 0xFFFFFFFF << (32 - range.mask);
+
+  return (ipNum & mask) === (baseNum & mask);
+}
+
+function isIPAddress(host) {
+  var ipRegex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+  return ipRegex.test(host);
+}
+
 function FindProxyForURL(url, host) {
   host = host.toLowerCase();
   url = url.toLowerCase();
@@ -402,6 +430,20 @@ function FindProxyForURL(url, host) {
   for (var i = 0; i < blockedSites.length; i++) {
     if (url.indexOf(blockedSites[i]) !== -1) {
       return blackhole;
+    }
+  }
+
+  for (var i = 0; i < blockedIPs.length; i++) {
+    if (host === blockedIPs[i]) {
+      return blackhole;
+    }
+  }
+
+  if (isIPAddress(host)) {
+    for (var i = 0; i < blockedIPRanges.length; i++) {
+      if (isIPInRange(host, blockedIPRanges[i])) {
+        return blackhole;
+      }
     }
   }
 
