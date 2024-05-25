@@ -12,7 +12,7 @@ var adRegex = new RegExp(
 
 var blockedURLs = [];
 var blockedSites = [
-  "1oavsblobprodcus350.blob.core.windows.net",
+"1oavsblobprodcus350.blob.core.windows.net",
 "37bvsblobprodcus311.blob.core.windows.net",
 "a.ads1.msn.com",
 "a.ads2.msads.net",
