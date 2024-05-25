@@ -369,6 +369,7 @@ var blockedSites = [
   "forum.pcekspert.com",
   "reddit.com/r/croatia",
   "reddit.com/r/hrvatska",
+  "discord.com/channels/889102180332732436",
   "discord.com/channels/452237221840551938",
   "discord.com/channels/1128414431085346897",
   "discord.com/channels/567592181905489920",
