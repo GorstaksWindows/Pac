@@ -361,7 +361,6 @@ var blockedSites = [
   "ztd.dds.microsoft.com",
   "rtl.hr",
   "hrt.hr",
-  "forum.hr",
   "dnevnik.hr",
   "novatv.dnevnik.hr",
   "novavideo.dnevnik.hr",
