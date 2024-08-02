@@ -19,6 +19,7 @@ var blockedSites = [
   "novavideo.dnevnik.hr",
   "forum.bug.hr",
   "forum.pcekspert.com",
+  "reddit.com/r/askcroatia",
   "reddit.com/r/croatia",
   "reddit.com/r/hrvatska",
   "discord.com/channels/889102180332732436",
