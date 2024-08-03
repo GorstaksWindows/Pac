@@ -12,6 +12,7 @@ var adRegex = new RegExp(
 
 var blockedURLs = [];
 var blockedSites = [
+  "instrumenttactics.com",
   "srce.unizg.hr",
   "rtl.hr",
   "hrt.hr",
