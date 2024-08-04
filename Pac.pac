@@ -14,11 +14,6 @@ var blockedURLs = [];
 var blockedSites = [
   "instrumenttactics.com",
   "srce.unizg.hr",
-  "rtl.hr",
-  "hrt.hr",
-  "dnevnik.hr",
-  "novatv.dnevnik.hr",
-  "novavideo.dnevnik.hr",
   "forum.hr",
   "forum.bug.hr",
   "forum.pcekspert.com",
