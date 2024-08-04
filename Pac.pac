@@ -19,6 +19,7 @@ var blockedSites = [
   "dnevnik.hr",
   "novatv.dnevnik.hr",
   "novavideo.dnevnik.hr",
+  "forum.hr",
   "forum.bug.hr",
   "forum.pcekspert.com",
   "reddit.com/r/askcroatia",
