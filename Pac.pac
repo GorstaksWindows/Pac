@@ -14,7 +14,6 @@ var blockedURLs = [];
 var blockedSites = [
   "instrumenttactics.com",
   "srce.unizg.hr",
-  "forum.hr",
   "forum.bug.hr",
   "forum.pcekspert.com",
   "reddit.com/r/askcroatia",
